@@ -1,0 +1,16 @@
+CREATE TABLE `user` (
+  `user_id` bigint(20) NOT NULL,
+  `user_name` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_email` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_password` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+ 
+INSERT INTO `user` (`user_id`, `user_name`, `user_email`, `user_password`) VALUES
+(1, 'cairocoders', 'cairocoders@gmail.com', 'pass'),
+(2, 'tutorial101.blogspot.com', 'cairocoders08@gmail.com', 'pass');
+ 
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_id`);
+ 
+ALTER TABLE `user`
+  MODIFY `user_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
